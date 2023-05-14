@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id = "img1" src="./img1.jpg" alt="flower1" 
+        style="object-fit:fill;
+            width:120px;
+            height:120px;
+            border: solid 1px #CCC" />
+    <img id = "img2" src="./img2.jpeg" alt="flower2" 
+        style="object-fit:fill;
+            width:120px;
+            height:120px;
+            border: solid 1px #CCC" />
+    <br>
+    <button id="btnSwap">Swap</button>
+
+    <script>
+
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const btnSwap = document.getElementById("btnSwap")
+        
+        btnSwap.onclick = function(){
+            console.log("click swap");
+            if(img1.src.match('img1.jpg') && img2.src.match("img2.jpeg")){
+                img1.src = 'img2.jpeg';
+                img2.src = 'img1.jpg';
+            }else{
+                img1.src = 'img1.jpg';
+                img2.src = 'img2.jpeg'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>
+        <input type = "number" id="num1" placeholder="Number1"/>
+        <input type = "number" id="num2" placeholder="Nuumber2"/>
+        <input type = "number" id="result" placeholder="Result"/>
+    </p>
+    <p>
+        <button id="btncalculate">Calculate</button>
+    </p>
+
+    <script>
+        const btnCalculate = document.getElementById("btncalculate");
+        btnCalculate.onclick = function(){
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            document.getElementById("result").value = num1 + num2;
+        }
+    </script>
+</body>
+</html>
